@@ -10,8 +10,8 @@
 
 /* Navbar */
 .navbar {
-  padding-right: 85px;
-  padding-left: 85px;
+  padding-right: 115px;
+  padding-left: 115px;
 }
 
 .navbar a {
@@ -25,7 +25,7 @@
   color: var(--warnaoren);
 }
 
-/* Button */
+/* Button nav*/
 .button {
 }
 
@@ -40,6 +40,40 @@
 .button button:hover {
   background-color: #4b2648;
   color: var(--warnaputih);
+}
+
+/* Button Group */
+.button-group {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.button-group button {
+  font-size: 20px;
+  border: solid 2px #4b2648;
+  border-radius: 20px;
+  padding: 0px 35px 0px 35px;
+  color: #4b2648;
+}
+
+.button-group button:hover {
+  background-color: #4b2648;
+  color: var(--warnaputih);
+}
+
+#search {
+  font-size: 20px;
+  border: solid 2px var(--warnaoren);
+  background-color: var(--warnaoren);
+  border-radius: 20px;
+  padding: 0px 35px 0px 35px;
+  color: var(--warnaputih);
+}
+
+#search:hover {
+  background-color: var(--warnaputih);
+  color: var(--warnaoren);
 }
 
 /* Welcome To KnowPedia */
@@ -108,6 +142,7 @@
   font-weight: 700;
   font-size: 20px;
 }
+
 /* Main Article Box Right */
 .righ-box-direction {
   flex-direction: column;
@@ -143,4 +178,35 @@
   margin-right: 19px;
   margin-bottom: 19px;
   text-decoration: none;
+}
+
+/* Get To Know */
+.get-to-know {
+  margin-top: 0px;
+  margin-right: 10%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.get-to-know h1 {
+  margin-top: 30px;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--warnaungu);
+}
+
+.get-to-know span {
+  color: var(--warnaoren);
+}
+
+/* Insight */
+.insight-image {
+  text-align: center;
+}
+
+.insight-image img {
+  margin-top: 50px;
+  height: 40px;
 }
