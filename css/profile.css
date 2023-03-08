@@ -10,7 +10,8 @@ h2,
 h3,
 h4,
 h5,
-p {
+p,
+label {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -157,4 +158,42 @@ button:hover {
   padding: 20px 5% 20px 5%;
   background-color: #5a2f57;
   color: white;
+}
+
+.login-bg {
+  position: relative;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 100%;
+}
+
+.login-card {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ebebeb;
+}
+
+.form {
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+}
+.form-border {
+  background: -webkit-linear-gradient(left, #ff4e4e, #a61e50);
+  height: 1px;
+  width: 100%;
+}
+.form-content {
+  background: #ebebeb;
+  border: none;
+  outline: none;
+  padding-top: 14px;
 }
