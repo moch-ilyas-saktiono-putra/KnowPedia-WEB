@@ -9,36 +9,51 @@
   font-family: "Montserrat", sans-serif;
 }
 
+/* Logo */
+.logo {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 50px;
+  color: #5a2f57;
+}
+
 /* Navbar */
 .navbar {
-  padding-right: 115px;
-  padding-left: 115px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 25px 0;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
-.navbar a {
-  color: var(--warnaungu);
-  text-decoration: none;
-  font-weight: 800;
-  font-size: 50px;
-}
-
-.navbar span {
-  color: var(--warnaoren);
-}
-
-/* Button nav*/
-
-.button button {
-  font-size: 20px;
-  border: solid 2px #4b2648;
+/* Button */
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 30px;
   border-radius: 20px;
-  padding: 0px 35px 0px 35px;
-  color: #4b2648;
+  border-style: solid;
+  border-color: #5a2f57;
+  color: #5a2f57;
+  background: none;
+  transition: 0.15s;
+  margin: 5px 10px;
 }
 
-.button button:hover {
-  background-color: #4b2648;
-  color: var(--warnaputih);
+button:hover {
+  background-color: #5a2f57;
+  transition: 0.3s;
+  color: white;
+}
+
+.cta {
+  background: #5a2f57;
+  color: white;
+  border-color: #5a2f57;
 }
 
 /* Button Group */
@@ -77,6 +92,8 @@
 
 /* Welcome To KnowPedia */
 .container {
+  display: flex;
+  justify-content: center;
   height: 350px;
   border-radius: 10px;
   font-weight: 800;
