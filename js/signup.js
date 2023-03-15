@@ -20,6 +20,7 @@ function validation() {
         Swal.fire({
             title: "Data berhasil disimpan", 
             html: `<pre>` + txt + `</pre>` ,
+            type: "success",
             icon: "success",
             footer: "Happy Writing!",
             customClass: {

@@ -2,6 +2,18 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  bottom: 0;
+  top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+label {
+  font-family: "Montserrat", sans-serif;
 }
 
 .logo {
@@ -14,14 +26,21 @@
   margin: 10px 20px;
 }
 
+body {
+  background-image: url("https://picsum.photos/id/1029/1920/1080");
+}
+
 .login-bg {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10%;
+  left: 0;
+  right: 0;
 }
 
 .form {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -30,6 +49,7 @@
   border-radius: 15px;
   border-color: purple;
   padding: 40px;
+  background-color: white;
   height: auto;
 }
 
@@ -77,6 +97,19 @@
   color: orangered;
   outline-color: orangered;
   border-color: orangered;
+}
+
+.dont-have-account {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 5px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 2px;
+  margin-bottom: 10px;
 }
 
 .cta-button {
