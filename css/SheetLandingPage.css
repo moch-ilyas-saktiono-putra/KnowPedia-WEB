@@ -23,11 +23,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px 0 25px 0;
+  margin: 0px 0 25px 0;
   padding-left: 5%;
   padding-right: 5%;
+  width: 100%;
+  background-color: var(--warnaputih);
 }
 
+.navbar a {
+  text-decoration: none;
+}
 /* Button */
 button {
   font-family: "Montserrat", sans-serif;
@@ -56,26 +61,7 @@ button:hover {
   border-color: #5a2f57;
 }
 
-/* Button Group */
-.button-group {
-  margin-top: 50px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.button-group button {
-  font-size: 20px;
-  border: solid 2px #4b2648;
-  border-radius: 20px;
-  padding: 0px 35px 0px 35px;
-  color: #4b2648;
-}
-
-.button-group button:hover {
-  background-color: #4b2648;
-  color: var(--warnaputih);
-}
-
+/* Search Button */
 #search {
   font-size: 20px;
   border: solid 2px var(--warnaoren);
@@ -207,7 +193,6 @@ button:hover {
 }
 
 .get-to-know h1 {
-  margin-top: 30px;
   font-size: 30px;
   font-weight: 700;
   color: var(--warnaungu);
@@ -229,10 +214,11 @@ button:hover {
 
 /* Daily Content */
 .box-daily {
-  margin-top: 40px;
+  gap: 2%;
+  margin-top: 10px;
   justify-content: center;
-  display: grid;
-  grid-template-columns: 500px 500px;
+  display: flex;
+  flex-direction: row;
 }
 
 .daily-content {
@@ -268,7 +254,7 @@ button:hover {
 }
 
 /* Footer */
-.footer-container {
+footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -277,4 +263,10 @@ button:hover {
   padding: 20px 5% 20px 5%;
   background-color: #5a2f57;
   color: white;
+}
+
+.media-sosial a{
+  margin-bottom: 0px;
+  text-decoration: none;
+  color: var(--warnaputih);
 }
