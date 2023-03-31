@@ -61,6 +61,11 @@
   border-color: #5a2f57;
 }
 
+/* Explore */
+#explore {
+  color: var(--warnaoren);
+}
+
 /* Search button */
 .search {
   text-align: center;
@@ -112,7 +117,7 @@
 }
 
 .content h5 {
-  color: black;
+  color: var(--warnaoren);
 }
 
 /* Footer */
