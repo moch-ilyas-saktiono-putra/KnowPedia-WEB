@@ -27,7 +27,7 @@ label {
 }
 
 body {
-  background-image: url("https://picsum.photos/id/1029/1920/1080");
+  background-image: url("https://picsum.photos/id/802/1920/1080");
 }
 
 .login-bg {
@@ -47,9 +47,9 @@ body {
   border: solid;
   border-width: 3px;
   border-radius: 15px;
-  border-color: purple;
+  border-color: #f2f2f2;
   padding: 40px;
-  background-color: white;
+  background-color: #f2f2f2;
   height: auto;
 }
 

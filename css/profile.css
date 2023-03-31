@@ -137,8 +137,14 @@ button:hover {
   justify-content: space-evenly;
 }
 
+.desc {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+}
+
 .card-title {
   margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .card-category {
@@ -146,6 +152,7 @@ button:hover {
   background-color: #5a2f57;
   color: white;
   padding: 6px 7px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .footer-container {
@@ -157,6 +164,13 @@ button:hover {
   padding: 20px 5% 20px 5%;
   background-color: #5a2f57;
   color: white;
+}
+
+.footer-desc {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+  margin: 15px 0 0 0;
 }
 
 .login-bg {
@@ -176,6 +190,7 @@ button:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #ebebeb;
+  opacity: 0.5;
   border-radius: 20px;
 }
 
@@ -209,6 +224,7 @@ button:hover {
 }
 .form-content {
   background: #ebebeb;
+  opacity: 0.5;
   border: none;
   outline: none;
   padding-top: 14px;
