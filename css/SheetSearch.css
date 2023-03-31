@@ -1,0 +1,134 @@
+:root {
+  --warnaungu: #4b2648;
+  --warnaoren: #ef8c33;
+  --warnaputih: #ffff;
+  --warnaabu: #d9d9d9;
+}
+/* All */
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Logo */
+.logo {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 50px;
+  color: #5a2f57;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 0 25px 0;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 100%;
+  background-color: var(--warnaputih);
+}
+
+.navbar a {
+  text-decoration: none;
+}
+/* Button */
+.navbar button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 30px;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: #5a2f57;
+  color: #5a2f57;
+  background: none;
+  transition: 0.15s;
+  margin: 5px 10px;
+}
+
+.navbar button:hover {
+  background-color: #5a2f57;
+  transition: 0.3s;
+  color: white;
+}
+
+.cta {
+  background: #5a2f57;
+  color: white;
+  border-color: #5a2f57;
+}
+
+/* Search button */
+.search {
+  text-align: center;
+}
+
+.search button {
+  width: 40%;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid var(--warnaungu);
+  border-radius: 20px;
+  background-color: var(--warnaputih);
+}
+
+.search input {
+  width: 90%;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--warnaputih);
+  outline: none;
+  padding-left: 10px;
+}
+
+/* Content */
+.display {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid var(--warnaungu);
+  height: auto;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.content img {
+  border-radius: 10px;
+  width: 90px;
+  height: 90px;
+  margin-right: 20px;
+}
+
+.content p {
+  margin: 0px;
+  color: black;
+}
+
+.content h5 {
+  color: black;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 15px 0 0 0;
+  padding: 20px 5% 20px 5%;
+  background-color: #5a2f57;
+  color: white;
+}
+
+.media-sosial a {
+  margin-bottom: 0px;
+  text-decoration: none;
+  color: var(--warnaputih);
+}
