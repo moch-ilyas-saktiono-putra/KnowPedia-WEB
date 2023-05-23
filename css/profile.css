@@ -141,11 +141,12 @@ button:hover {
   margin-bottom: 10px;
 }
 
-.card-category {
+.card-delete button {
   border-radius: 10px;
-  background-color: #5a2f57;
+  border: none;
+  background-color: #d4322f;
   color: white;
-  padding: 6px 7px;
+  padding: 8px 20px;
 }
 
 .footer-container {
