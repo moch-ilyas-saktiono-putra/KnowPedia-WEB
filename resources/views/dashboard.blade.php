@@ -63,10 +63,9 @@
           src="https://digitalhub.fifa.com/transform/b817ecc7-f044-45b8-8f67-a084a5d10e39/Argentina-v-France-Final-FIFA-World-Cup-Qatar-2022?io=transform:fill,height:868,width:1536&quality=100"
           alt="" />
         <div class="left-text">
-          <a href="#">Lorem ipsum dolor sit amet.</a>
+          <a href="#">Messi Winning The World CUP</a>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Temporibus nam officia fugit repudiandae natus. Libero!
+            Magic, that the word that can discribe messi
           </p>
         </div>
       </div>
@@ -79,10 +78,9 @@
         <div class="main-box-right mt-0">
           <img src="{{ asset('image/properti/Walpaper.jpg') }}" alt="" />
           <div class="right-text">
-            <a href="">Lorem ipsum dolor sit amet.</a>
+            <a href="">Paper</a>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates, fuga.
+              Just a page of paper
             </p>
           </div>
         </div>
@@ -93,10 +91,9 @@
         <div class="main-box-right">
           <img src="{{ asset('image/properti/Walpaper.jpg') }}" alt="" />
           <div class="right-text">
-            <a href="">Lorem ipsum dolor sit amet.</a>
+            <a href="">Paper</a>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates, fuga.
+              Just a page of paper
             </p>
           </div>
         </div>
@@ -124,15 +121,8 @@
       <h1>Get To Know Know<span>Pedia.</span></h1>
     </a>
     <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa ad facere
-      iste nostrum consectetur nesciunt commodi velit perferendis assumenda?
-      Quam eius sequi assumenda iure, alias necessitatibus ducimus quasi
-      labore vero quaerat neque illo quas tempore laboriosam, voluptates et
-      saepe magni eligendi dicta totam. Accusantium possimus aliquam vel porro
-      sequi placeat fuga, a in totam! Unde facilis possimus officiis in
-      nesciunt dignissimos maxime temporibus laboriosam odio eligendi
-      similique reprehenderit incidunt pariatur nulla ipsum, fugiat libero
-      rerum?
+      KnowPedia is a web platform for sharing information globally. It provides easy access to reliable knowledge,
+      encourages collaboration, and expands understanding on diverse topics.
     </p>
   </div>
   <!-- Daily Insight -->
@@ -147,11 +137,62 @@
       <div class="daily-content mb-4">
         <img src="{{ asset('image/properti/Thumbnail.jpg') }}" alt="" />
         <div class="layer">
-          <a href="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam,
-            molestias itaque placeat explicabo ex maxime.</a>
+          <a href="">
+            "Why is moving on so hard?"</a>
         </div>
       </div>
     </a>
+    <!-- Contennt -->
+    <a href="Article.html">
+      <div class="daily-content mb-4">
+        <img src="{{ asset('image/properti/Thumbnail.jpg') }}" alt="" />
+        <div class="layer">
+          <a href="">
+            "Why is moving on so hard?"</a>
+        </div>
+      </div>
+    </a>
+    <!-- Contennt -->
+    <a href="Article.html">
+      <div class="daily-content mb-4">
+        <img src="{{ asset('image/properti/Thumbnail.jpg') }}" alt="" />
+        <div class="layer">
+          <a href="">
+            "Why is moving on so hard?"</a>
+        </div>
+      </div>
+    </a>
+    <!-- Contennt -->
+    <a href="Article.html">
+      <div class="daily-content mb-4">
+        <img src="{{ asset('image/properti/Thumbnail.jpg') }}" alt="" />
+        <div class="layer">
+          <a href="">
+            "Why is moving on so hard?"</a>
+        </div>
+      </div>
+    </a>
+    <!-- Contennt -->
+    <a href="Article.html">
+      <div class="daily-content mb-4">
+        <img src="{{ asset('image/properti/Thumbnail.jpg') }}" alt="" />
+        <div class="layer">
+          <a href="">
+            "Why is moving on so hard?"</a>
+        </div>
+      </div>
+    </a>
+    <!-- Contennt -->
+    <a href="Article.html">
+      <div class="daily-content mb-4">
+        <img src="{{ asset('image/properti/Thumbnail.jpg') }}" alt="" />
+        <div class="layer">
+          <a href="">
+            "Why is moving on so hard?"</a>
+        </div>
+      </div>
+    </a>
+  
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"

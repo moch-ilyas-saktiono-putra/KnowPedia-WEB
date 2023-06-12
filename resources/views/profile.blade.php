@@ -87,8 +87,11 @@
 
       <div class="article-box d-flex flex-wrap justify-content-center">
         <!-- Card -->
+        @php
+        $count = 0;
+        @endphp
         @foreach ($articles as $article)
-        <a class="text-decoration-none" href="/article/{{ $article->id }}">
+        @if ($count < 6) <a class="text-decoration-none" href="/article/{{ $article->id }}">
           <div class="card d-flex flex-row p-3 mb-4 ms-4 me-4" style="border: solid #4b2648; border-radius: 30px">
             {{-- Thumbnail --}}
             <div>
@@ -99,13 +102,13 @@
               border-radius: 20px 20px 20px 20px;
             " src="{{asset('thumbnails/'.$article->thumbnail)}}" alt="" />
               <div class="d-flex text-bottom mt-3">
-                <button href="{{url("edit/$article->id")}}" type="button" class="btn btn-primary" style="margin-right:
-                  10px;
-                  text-alignt">Edit</button>
+                <a href="{{ url("edit/$article->id") }}" class="btn btn-primary m-0" style="margin-right: 10px;
+                  text-align:
+                  center;">Edit</a>
                 <form action="/delete/{{ $article->id }}" method='POST'>
                   @method('DELETE')
                   @csrf
-                  <button type="submit" class="btn btn-danger">Delete</button>
+                  <button type="submit" class="btn btn-danger m-0 ms-2">Delete</button>
                 </form>
               </div>
             </div>
@@ -123,8 +126,12 @@
 
             </div>
           </div>
-        </a>
-        @endforeach
+          </a>
+          @php
+          $count++;
+          @endphp
+          @endif
+          @endforeach
       </div>
     </div>
   </div>

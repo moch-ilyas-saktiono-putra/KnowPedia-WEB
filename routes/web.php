@@ -33,13 +33,6 @@ Route::get('/edit/{id}', [ArticleController::class, 'edit']);
 Route::patch('edit/{id}', [ArticleController::class, 'update']);
 
 Route::delete('/delete/{id}', [ArticleController::class, 'destroy']);
-// Route::get('/profile', [ArticleController::class,'index']);
-// Route::get('/article/create', [ArticleController::class,'create']);
-// Route::get('/article/{id}', [ArticleController::class,'show']);
-// Route::post('/article', [ArticleController::class,'store']);
-// Route::get('/article/{id}/edit', [ArticleController::class,'edit']);
-// Route::patch('/article/{id}', [ArticleController::class,'update']);
-// Route::delete('/article/{id}', [ArticleController::class,'destroy']);
 
 // login Register
 Route::get('/login', [AuthController::class, 'login']);
@@ -48,20 +41,11 @@ Route::get('/logout', [AuthController::class, 'logout']);
 Route::get('/register', [AuthController::class, 'register_form']);
 Route::post('/register', [AuthController::class, 'register']);
 
+Route::get('/search', function(){
+    return view('search');
+});
 
+Route::get('/gettoknow', function(){
+    return view('gettoknow');
+});
 
-// Route::get('/dashboard', function(){
-//     return view('dashboard');
-// });
-// Route::get('/search', function(){
-//     return view('search');
-// });
-// Route::get('/gettoknow', function(){
-//     return view('gettoknow');
-// });
-// Route::get('/login', function(){
-//     return view('login');
-// });
-// Route::get('/signup', function(){
-//     return view('signup');
-// });

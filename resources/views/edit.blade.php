@@ -58,6 +58,11 @@
         <form method="POST" action="{{url("edit/{$article->id}")}}" enctype="multipart/form-data">
             @method('PATCH')
             @csrf
+            {{-- Thumbnail --}}
+            <h3>Thumbnail</h3>
+            <div class="box-thumbnail">
+                <input id="thumbnail" name="thumbnail" type="file" value=""/>
+            </div>
             {{-- Title --}}
             <h3>Title</h3>
             <textarea class="title-text" id="title" name="title" value="">{{$article->title}}</textarea>
