@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -13,7 +15,20 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('dashboard');
+        $articles = DB::table('articles')
+                        ->select('id', 'title', 'thumbnail', 'description')
+                        ->orderBy('id','desc')
+                        ->get();
+
+        $viewdata = [
+            'articles' => $articles,
+        ];
+
+        return view('dashboard', $viewdata);
+
+        // $viewdata = [
+        //     vi
+        // ]
     }
 
     /**

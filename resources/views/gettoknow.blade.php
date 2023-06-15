@@ -27,15 +27,10 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <a class="logo fw-bold" href="Dashboard.html">Know<span style="color: #ef8c33">Pedia.</span>
+        <a class="logo fw-bold" href="{{url('/')}}">Know<span style="color: #ef8c33">Pedia.</span>
         </a>
         <div>
-            <a href="Write.html">
-                <button type="button" class="outline">Write</button>
-            </a>
-            <a href="profile.html">
-                <button type="button" class="cta">Log In</button>
-            </a>
+         
         </div>
     </nav>
     <hr />
@@ -67,17 +62,11 @@
     <!-- Content -->
     <div class="text-center ms-5 me-5 mb-5">
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-            ratione quo dolores. Voluptatum, hic animi expedita aperiam optio
-            adipisci aliquam sed dolore ea facere explicabo libero fugit quidem iure
-            numquam dolores quibusdam nemo voluptates a sequi praesentium odit. Id
-            in corporis nihil dolor molestias eius vel impedit exercitationem
-            deserunt, eaque optio pariatur veniam ad autem? Asperiores corrupti
-            autem quisquam. Consectetur, illum repellendus. Aliquam iure incidunt
-            mollitia cum enim autem asperiores voluptatum vero molestias odio
-            commodi eligendi corporis nobis consectetur dolorum at sed aspernatur
-            harum consequatur quae, deleniti, porro eos minus. Consequuntur placeat
-            aliquam aspernatur voluptate dolorem officia earum dicta similique.
+            KnowPedia is a website that provides up-to-date information that is currently being widely discussed. This
+            site is the perfect place for those who want to stay updated on various topics that are currently being
+            talked about, ranging from the latest news, trends, to issues related to entertainment, technology, sports,
+            and much more. With continuously updated content, KnowPedia offers easy and fast access for users to get the
+            latest information and expand their knowledge.
         </p>
     </div>
 
@@ -88,9 +77,7 @@
 <footer class="footer">
     <p class="m-0 fw-bold fs-3">KnowPedia.</p>
     <p style="text-align: center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste perspiciatis
-        necessitatibus itaque soluta eos, non amet. Possimus illum eum eaque cum,
-        provident ratione molestias ad.
+        "Awaken your curiosity with the most relevant and up-to-date information"
     </p>
     <div class="media-sosial" style="font-size: 20px">
         <a href=""><i class="fa-brands fa-square-facebook"></i></a>

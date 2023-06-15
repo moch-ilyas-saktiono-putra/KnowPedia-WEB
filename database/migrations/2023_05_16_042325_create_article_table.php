@@ -20,6 +20,7 @@ return new class extends Migration
             $table->longText('description');
             $table->longText('content');
             $table->string('thumbnail');
+            $table->date('date');
             $table->timestamps();
         });
     }

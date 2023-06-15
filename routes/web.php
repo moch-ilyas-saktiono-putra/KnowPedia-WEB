@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\GetToKnowController;
 use App\Http\Controllers\UserController;
 use Illuminate\Console\View\Components\Task;
 use Illuminate\Support\Facades\Route;
@@ -21,13 +22,23 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+// Tampilan Dashboard
 Route::get('/', [UserController::class, 'index']);
 
+// Tampilan Profile User
 Route::get('/profile', [ArticleController::class,'index']);
+
+// Tampilan Create Artikel
 Route::get('/write', [ArticleController::class,'create']);
 
+// POST Artikel
 Route::post('/write', [ArticleController::class,'store']);
+
+// Tampilan Detail Artikel 
 Route::get('article/{id}', [ArticleController::class, 'show']);
+
+// Tampilan Get To Know
+Route::get('/gtk', [GetToKnowController::class, 'index']);
 
 Route::get('/edit/{id}', [ArticleController::class, 'edit']);
 Route::patch('edit/{id}', [ArticleController::class, 'update']);
@@ -44,8 +55,3 @@ Route::post('/register', [AuthController::class, 'register']);
 Route::get('/search', function(){
     return view('search');
 });
-
-Route::get('/gettoknow', function(){
-    return view('gettoknow');
-});
-

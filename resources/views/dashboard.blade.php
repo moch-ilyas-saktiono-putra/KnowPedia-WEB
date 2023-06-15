@@ -35,11 +35,11 @@
         <button type="button" class="cta">Write</button>
       </a>
       <a href="/logout">
-        <button type="button" class="cta">Log Out</button>
+        <button type="button" class="cta">Logout</button>
       </a>
       @else
       <a href="/login">
-        <button type="button" class="cta">Write</button>
+        <button type="button" class="cta">Login</button>
       </a>
       @endif
     </div>
@@ -117,7 +117,7 @@
 
   <!-- Get To Know -->
   <div class="get-to-know">
-    <a href="GetToKnow.html" class="text-decoration-none">
+    <a href="{{url('/gtk')}}" class="text-decoration-none">
       <h1>Get To Know Know<span>Pedia.</span></h1>
     </a>
     <p>
@@ -131,68 +131,28 @@
   </div>
 
   <!-- Daily Insight Content -->
-  <div class="box-daily d-flex flex-wrap">
+  <div class="box-daily d-flex flex-wrap" style="margin-left: 15%; margin-right:15%;">
     <!-- Contennt -->
-    <a href="Article.html">
+    @php
+    $count = 0;
+    @endphp
+    @foreach ($articles as $article)
+    @if ($count < 4)
+    <a href="{{ url("article/$article->id") }}">
       <div class="daily-content mb-4">
-        <img src="{{ asset('image/properti/Thumbnail.jpg') }}" alt="" />
+        <img style="object-fit: cover" src="{{asset('thumbnails/'.$article->thumbnail)}}" alt="" />
         <div class="layer">
           <a href="">
-            "Why is moving on so hard?"</a>
+            {{$article->title}}</a>
         </div>
       </div>
     </a>
-    <!-- Contennt -->
-    <a href="Article.html">
-      <div class="daily-content mb-4">
-        <img src="{{ asset('image/properti/Thumbnail.jpg') }}" alt="" />
-        <div class="layer">
-          <a href="">
-            "Why is moving on so hard?"</a>
-        </div>
-      </div>
-    </a>
-    <!-- Contennt -->
-    <a href="Article.html">
-      <div class="daily-content mb-4">
-        <img src="{{ asset('image/properti/Thumbnail.jpg') }}" alt="" />
-        <div class="layer">
-          <a href="">
-            "Why is moving on so hard?"</a>
-        </div>
-      </div>
-    </a>
-    <!-- Contennt -->
-    <a href="Article.html">
-      <div class="daily-content mb-4">
-        <img src="{{ asset('image/properti/Thumbnail.jpg') }}" alt="" />
-        <div class="layer">
-          <a href="">
-            "Why is moving on so hard?"</a>
-        </div>
-      </div>
-    </a>
-    <!-- Contennt -->
-    <a href="Article.html">
-      <div class="daily-content mb-4">
-        <img src="{{ asset('image/properti/Thumbnail.jpg') }}" alt="" />
-        <div class="layer">
-          <a href="">
-            "Why is moving on so hard?"</a>
-        </div>
-      </div>
-    </a>
-    <!-- Contennt -->
-    <a href="Article.html">
-      <div class="daily-content mb-4">
-        <img src="{{ asset('image/properti/Thumbnail.jpg') }}" alt="" />
-        <div class="layer">
-          <a href="">
-            "Why is moving on so hard?"</a>
-        </div>
-      </div>
-    </a>
-  
+    @php
+    $count++;
+    @endphp
+    @endif
+    @endforeach
+
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
@@ -202,9 +162,7 @@
 <footer class="footer">
   <p class="m-0 fw-bold fs-3">KnowPedia.</p>
   <p style="text-align: center">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste perspiciatis
-    necessitatibus itaque soluta eos, non amet. Possimus illum eum eaque cum,
-    provident ratione molestias ad.
+    "Awaken your curiosity with the most relevant and up-to-date information"
   </p>
   <div class="media-sosial" style="font-size: 20px">
     <a href=""><i class="fa-brands fa-square-facebook"></i></a>
