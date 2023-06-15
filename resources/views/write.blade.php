@@ -59,15 +59,33 @@
             @csrf
             {{-- Thumbnail --}}
             <h3>Thumbnail</h3>
-            <div class="box-thumbnail">
-                <input id="thumbnail" name="thumbnail" type="file" />
+            <div class="text-thumbnail m-0">
+                <input style="width: 100%;
+                height: 100px;
+                border-radius: 20px;
+                padding: 20px;
+                background-color: #d9d9d9;
+                resize: none;
+                border: #d9d9d9;
+                outline-color: #d9d9d9;
+                margin-bottom: 50px;" id="thumbnail" name="thumbnail" type="text"
+                    placeholder="Drop the link here..." />
             </div>
             {{-- Title --}}
             <h3>Title</h3>
-            <textarea class="title-text" id="title" name="title" placeholder="The Title is..."></textarea>
+            <input style="width: 100%;
+            height: 100px;
+            border-radius: 20px;
+            padding: 20px;
+            background-color: #d9d9d9;
+            resize: none;
+            border: #d9d9d9;
+            outline-color: #d9d9d9;
+            margin-bottom: 50px;" class="title-text" id="title" name="title" placeholder="The Title is..." />
             {{-- Desk --}}
             <h3>Description</h3>
-            <textarea class="desc-text" id="descriprion" name="description" placeholder="The Descriptin is..."></textarea>
+            <textarea class="desc-text" id="descriprion" name="description"
+                placeholder="The Descriptin is..."></textarea>
             {{-- Content --}}
             <h3>Content</h3>
             <textarea class="content-text" id="content" name="content" placeholder="The Content is..."></textarea>

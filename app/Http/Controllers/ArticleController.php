@@ -23,8 +23,16 @@ class ArticleController extends Controller
             ->select('id', 'title', 'thumbnail', 'description')
             ->get();
         
+        $second = DB::table('articles')
+            ->select('id', 'title', 'thumbnail', 'description')
+            ->orderBy('id','desc')
+            ->skip(1)
+            ->take(1)
+            ->first();
+
         $viewData = [
             'articles' => $articles,
+            'second' => $second,
             'user' => $user,
         ];
         

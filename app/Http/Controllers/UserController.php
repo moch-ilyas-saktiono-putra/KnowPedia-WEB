@@ -15,16 +15,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $articles = DB::table('articles')
-                        ->select('id', 'title', 'thumbnail', 'description')
-                        ->orderBy('id','desc')
-                        ->get();
-
-        $viewdata = [
-            'articles' => $articles,
-        ];
-
-        return view('dashboard', $viewdata);
+       
 
         // $viewdata = [
         //     vi

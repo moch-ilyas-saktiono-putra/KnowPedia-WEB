@@ -3,6 +3,7 @@
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\GetToKnowController;
+use App\Http\Controllers\MainArticleController;
 use App\Http\Controllers\UserController;
 use Illuminate\Console\View\Components\Task;
 use Illuminate\Support\Facades\Route;
@@ -22,8 +23,9 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-// Tampilan Dashboard
-Route::get('/', [UserController::class, 'index']);
+// Dashboard
+Route::get('/', [MainArticleController::class, 'index']);
+
 
 // Tampilan Profile User
 Route::get('/profile', [ArticleController::class,'index']);

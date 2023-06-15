@@ -32,7 +32,7 @@
     <div>
       @if (Auth::check())
       <a href="/profile">
-        <button type="button" class="cta">Write</button>
+        <button type="button" class="cta">Profile</button>
       </a>
       <a href="/logout">
         <button type="button" class="cta">Logout</button>
@@ -57,15 +57,16 @@
   <!-- Main Box -->
   <div class="main-box">
     <!-- Left Box -->
-    <a href="Article.html">
+    <a href="{{ url("article/$first->id") }}">
       <div class="main-box-left">
         <img
-          src="https://digitalhub.fifa.com/transform/b817ecc7-f044-45b8-8f67-a084a5d10e39/Argentina-v-France-Final-FIFA-World-Cup-Qatar-2022?io=transform:fill,height:868,width:1536&quality=100"
-          alt="" />
+        style="object-fit: cover"
+          src="{{asset('thumbnails/'.$first->thumbnail)}}"
+          alt=""/>
         <div class="left-text">
-          <a href="#">Messi Winning The World CUP</a>
+          <a class="pt-5" href="{{ url("article/$first->id") }}">{{$first->title}}</a>
           <p>
-            Magic, that the word that can discribe messi
+            {{$first->description}}
           </p>
         </div>
       </div>
@@ -76,11 +77,11 @@
       <!-- Top -->
       <a href="Article.html">
         <div class="main-box-right mt-0">
-          <img src="{{ asset('image/properti/Walpaper.jpg') }}" alt="" />
+          <img src="{{ asset('thumbnails/'.$second->thumbnail) }}" alt="" />
           <div class="right-text">
-            <a href="">Paper</a>
+            <a href="{{ url("article/$second->id") }}">{{$second -> title}}</a>
             <p>
-              Just a page of paper
+              {{$second->description}}
             </p>
           </div>
         </div>
@@ -89,11 +90,11 @@
       <!-- Bottom -->
       <a href="Article.html">
         <div class="main-box-right">
-          <img src="{{ asset('image/properti/Walpaper.jpg') }}" alt="" />
+          <img src="{{ asset('thumbnails/'.$third->thumbnail) }}" alt="" />
           <div class="right-text">
-            <a href="">Paper</a>
+            <a href="{{ url("article/$third->id") }}">{{$third->title}}</a>
             <p>
-              Just a page of paper
+              {{$third->description}}
             </p>
           </div>
         </div>
