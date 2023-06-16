@@ -26,6 +26,7 @@ class ArticleController extends Controller
         $articles = DB::table('articles')
             ->where('user_id', $userId)
             ->select('id', 'title', 'thumbnail', 'description','date')
+            ->orderBy('id', 'desc')
             ->get();
         
 
