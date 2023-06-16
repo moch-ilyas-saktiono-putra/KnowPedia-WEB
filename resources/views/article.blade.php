@@ -30,12 +30,19 @@
         <a class="logo fw-bold" href="/">Know<span style="color: #ef8c33">Pedia.</span>
         </a>
         <div>
+            @if (Auth::check())
             <a href="/profile">
                 <button type="button" class="outline">Profile</button>
             </a>
             <a href="/logout">
                 <button type="button" class="cta">Logout</button>
             </a>
+            @else
+            <a href="/login">
+                <button type="button" class="cta">Login</button>
+            </a>
+            @endif
+
         </div>
     </nav>
     <hr />
@@ -59,7 +66,7 @@
     <div class="article-content">
         <p style="white-space: pre-line">{{$article->content}}</p>
     </div>
-
+    @if (Auth::check())
     @if ($user->role == 'admin')
     <form action="/admin/{{ $article->id }}" method='POST'>
         @method('DELETE')
@@ -68,6 +75,7 @@
     </form>
     @else
 
+    @endif
     @endif
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"

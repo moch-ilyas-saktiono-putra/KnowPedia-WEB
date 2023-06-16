@@ -61,8 +61,8 @@
       <div class="main-box-left">
         <img style="object-fit: cover" src="{{$first->thumbnail}}" alt="" />
         <div class="left-text">
-          <a class="pt-5" href="{{ url("article/$first->id") }}">{{$first->title}}</a>
-          <p>
+          <a style="text-align: justify" class="pt-5" href="{{ url("article/$first->id") }}">{{$first->title}}</a>
+          <p style="text-align: justify">
             {{$first->description}}
           </p>
         </div>
@@ -75,7 +75,7 @@
         <img style="object-fit: cover" src="{{$second->thumbnail}}" alt="" />
         <div class="left-text">
           <a class="pt-5" href="{{ url("article/$second->id") }}">{{$second->title}}</a>
-          <p>
+          <p style="text-align: justify">
             {{$second->description}}
           </p>
         </div>

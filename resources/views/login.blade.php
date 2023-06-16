@@ -21,7 +21,7 @@
       <form class="form" method="POST" action="/login">
         @csrf
 
-        <a class="logo" href="Dashboard.html">Know<span style="color: #ef8c33">Pedia.</span>
+        <a class="logo" href="/">Know<span style="color: #ef8c33">Pedia.</span>
         </a>
         @if (session()->has('error_message'))
         <div style="background-color: red">

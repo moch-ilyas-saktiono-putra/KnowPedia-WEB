@@ -27,14 +27,11 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <a class="logo fw-bold" href="Dashboard.html">Know<span style="color: #ef8c33">Pedia.</span>
+        <a class="logo fw-bold" href="/">Know<span style="color: #ef8c33">Pedia.</span>
         </a>
         <div>
-            <a href="Write.html">
-                <button type="button" class="outline">Write</button>
-            </a>
-            <a href="profile.html">
-                <button type="button" class="cta">Log In</button>
+            <a href="/profile">
+                <button type="button" class="cta">Back</button>
             </a>
         </div>
     </nav>
@@ -42,14 +39,6 @@
 
     <!-- Rule -->
     <div class="rule">
-        <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
-            excepturi ratione est eos ut voluptatibus aut dolores deleniti earum
-            maxime, autem voluptatem esse molestias placeat maiores nemo, provident
-            id doloribus labore alias. Atque nulla hic totam dolores voluptate
-            dolorem maxime sequi laboriosam eligendi fugiat unde, voluptas minima
-            dicta quas culpa!
-        </p>
         <h2>Wanna Write Something ?</h2>
     </div>
 

@@ -133,6 +133,7 @@ button:hover {
 .left-text {
     margin-top: 20px;
     margin-left: 20px;
+    margin-right: 20px;
     text-align: left;
     display: block;
 }

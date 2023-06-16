@@ -22,7 +22,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js
     <div class="login-card">
       <form class="form" method="POST" action="/register">
         @csrf
-        <a class="logo" href="Dashboard.html">Know<span style="color: #ef8c33">Pedia.</span>
+        <a class="logo" href="/">Know<span style="color: #ef8c33">Pedia.</span>
         </a>
         <div class="text-input-container">
           <label>Name</label>
