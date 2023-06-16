@@ -147,7 +147,7 @@
 </body>
 
 <!-- Footer -->
-<footer class="footer">
+<footer class="footer" style="bottom: 0">
   <p class="m-0 fw-bold fs-3">KnowPedia.</p>
   <p style="text-align: center">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste perspiciatis

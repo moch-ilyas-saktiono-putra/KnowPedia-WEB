@@ -59,10 +59,7 @@
     <!-- Left Box -->
     <a href="{{ url("article/$first->id") }}">
       <div class="main-box-left">
-        <img
-        style="object-fit: cover"
-          src="{{$first->thumbnail}}"
-          alt=""/>
+        <img style="object-fit: cover" src="{{$first->thumbnail}}" alt="" />
         <div class="left-text">
           <a class="pt-5" href="{{ url("article/$first->id") }}">{{$first->title}}</a>
           <p>
@@ -75,10 +72,7 @@
     <!-- Rigth Box -->
     <a href="{{ url("article/$second->id") }}">
       <div class="main-box-left">
-        <img
-        style="object-fit: cover"
-          src="{{$second->thumbnail}}"
-          alt=""/>
+        <img style="object-fit: cover" src="{{$second->thumbnail}}" alt="" />
         <div class="left-text">
           <a class="pt-5" href="{{ url("article/$second->id") }}">{{$second->title}}</a>
           <p>
@@ -91,7 +85,7 @@
 
   <!-- Seacrh Button -->
   <div class="text-center m-4 d-flex justify-content-center">
-    <a style="text-decoration: none" href="Seacrh.html">
+    <a style="text-decoration: none" href="{{url("/searching")}}">
       <button class="d-flex" id="search">
         <p class="m-0 me-2" style="font-size: 20px">
           find something you like to read
@@ -125,8 +119,7 @@
     $count = 0;
     @endphp
     @foreach ($articles as $article)
-    @if ($count < 4)
-    <a href="{{ url("article/$article->id") }}">
+    @if ($count < 4) <a href="{{ url("article/$article->id") }}">
       <div class="daily-content mb-4">
         <img style="object-fit: cover" src="{{$article->thumbnail}}" alt="" />
         <div class="layer">
@@ -134,12 +127,12 @@
             {{$article->title}}</a>
         </div>
       </div>
-    </a>
-    @php
-    $count++;
-    @endphp
-    @endif
-    @endforeach
+      </a>
+      @php
+      $count++;
+      @endphp
+      @endif
+      @endforeach
 
   </div>
 
