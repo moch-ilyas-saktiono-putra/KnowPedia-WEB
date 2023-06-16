@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Models\User;
 
 class UserController extends Controller
 {
@@ -62,7 +63,16 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = DB::table('users')
+            ->select('id', 'name', 'picture')
+            ->where('id','=',$id)
+            ->first();
+
+        $view_data = [
+            'user' => $user
+        ];
+
+        return view('editprofile', $view_data);
     }
 
     /**
@@ -74,7 +84,21 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = Auth::user();
+        $userId = $user->id;
+
+        $picture = $request->input('picture');
+        $name = $request->input('name');
+
+        DB::table('users')
+               ->where('id',$userId)
+               ->update([
+                    'name' => $name,
+                    'picture' => $picture
+               ]);
+
+            return redirect('profile');
+
     }
 
     /**

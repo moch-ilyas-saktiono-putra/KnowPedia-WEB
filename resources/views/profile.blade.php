@@ -56,10 +56,15 @@
             height: 150px;
             width: 150px;
             object-fit: cover;
-          " src="{{asset('image/properti/Ilyas.jpg')}}" alt="" />
-      <h1 class="fw-bold ms-4" style="color: white">
-        {{$user->name}}
-      </h1>
+          " src="{{$user->picture}}" alt="" />
+      <div class="d-flex justify-content-center flex-column">
+        <h1 class="fw-bold ms-4" style="color: white">
+          {{$user->name}}
+        </h1>
+        <a href="{{url("/edit/profile/{$user->id}")}}">
+          <button class="btn btn-light ms-4" style="width:80px" href="">Edit</button>
+        </a>
+      </div>
     </div>
 
     <!-- Magic Word -->
@@ -100,7 +105,7 @@
               height: 190px;
               object-fit: cover;
               border-radius: 20px 20px 20px 20px;
-            " src="{{asset('thumbnails/'.$article->thumbnail)}}" alt="" />
+            " src="{{$article->thumbnail}}" alt="" />
               <div class="d-flex text-bottom mt-3">
                 <a href="{{ url("edit/$article->id") }}" class="btn btn-primary m-0" style="margin-right: 10px;
                   text-align:

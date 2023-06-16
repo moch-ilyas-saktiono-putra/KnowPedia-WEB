@@ -4,6 +4,7 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\GetToKnowController;
 use App\Http\Controllers\MainArticleController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\UserController;
 use Illuminate\Console\View\Components\Task;
 use Illuminate\Support\Facades\Route;
@@ -26,7 +27,6 @@ use Illuminate\Support\Facades\Route;
 // Dashboard
 Route::get('/', [MainArticleController::class, 'index']);
 
-
 // Tampilan Profile User
 Route::get('/profile', [ArticleController::class,'index']);
 
@@ -42,7 +42,15 @@ Route::get('article/{id}', [ArticleController::class, 'show']);
 // Tampilan Get To Know
 Route::get('/gtk', [GetToKnowController::class, 'index']);
 
+// Edit Artikel
 Route::get('/edit/{id}', [ArticleController::class, 'edit']);
+
+// Edit Profile
+Route::get('/edit/profile/{id}', [UserController::class, 'edit']);
+
+// Update Profile
+Route::patch('/edit/profile/{id}', [UserController::class, 'update']);
+
 Route::patch('edit/{id}', [ArticleController::class, 'update']);
 
 Route::delete('/delete/{id}', [ArticleController::class, 'destroy']);
@@ -53,7 +61,5 @@ Route::post('/login', [AuthController::class, 'auth']);
 Route::get('/logout', [AuthController::class, 'logout']);
 Route::get('/register', [AuthController::class, 'register_form']);
 Route::post('/register', [AuthController::class, 'register']);
-
-Route::get('/search', function(){
-    return view('search');
-});
+Route::get('/search', [SearchController::class, 'search']);
+Route::get('/searching', [SearchController::class, 'searching']);

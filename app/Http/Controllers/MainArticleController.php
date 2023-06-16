@@ -12,7 +12,7 @@ class MainArticleController extends Controller
         $articles = DB::table('articles')
                     ->select('id', 'title', 'thumbnail', 'description')
                     ->orderBy('id','desc')
-                    ->offset(3)
+                    ->offset(2)
                     ->limit(PHP_INT_MAX)
                     ->get();
 
@@ -29,18 +29,11 @@ class MainArticleController extends Controller
                     ->take(1)
                     ->first();
 
-        $third = DB::table('articles')
-                    ->select('id', 'title', 'thumbnail', 'description')
-                    ->orderBy('id','desc')
-                    ->skip(2)
-                    ->take(1)
-                    ->first();
 
         $viewdata = [
             'articles' => $articles,
             'first' => $first,
             'second' => $second,
-            'third' => $third,
                     ];
 
 return view ('dashboard',$viewdata);

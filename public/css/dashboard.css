@@ -118,12 +118,11 @@ button:hover {
     text-align: center;
     border-radius: 15px;
     border: solid var(--warnaungu) 2px;
-    height: 450px;
+    height: auto;
     width: 500px;
 }
 
 .main-box-left img {
-    opacity: 70%;
     height: 300px;
     width: 460px;
     margin-top: 19px;
@@ -156,7 +155,7 @@ button:hover {
     margin-top: 20px;
     border-radius: 15px;
     border: solid var(--warnaungu) 2px;
-    height: 215px;
+    height: auto;
     object-fit: cover;
     width: 500px;
 }

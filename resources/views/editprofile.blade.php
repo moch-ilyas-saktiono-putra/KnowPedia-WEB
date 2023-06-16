@@ -55,11 +55,11 @@
 
     <!-- Text Input -->
     <div class="text-box">
-        <form method="POST" action="{{url("edit/{$article->id}")}}" enctype="multipart/form-data">
+        <form method="POST" action="{{url("edit/profile/{$user->id}")}}" enctype="multipart/form-data">
             @method('PATCH')
             @csrf
             {{-- Thumbnail --}}
-            <h3>Thumbnail</h3>
+            <h3>Profile Picture</h3>
             <div class="text-thumbnail m-0">
                 <input style="width: 100%;
                 height: 100px;
@@ -69,11 +69,11 @@
                 resize: none;
                 border: #d9d9d9;
                 outline-color: #d9d9d9;
-                margin-bottom: 50px;" id="thumbnail" name="thumbnail" type="text" required
+                margin-bottom: 50px;" id="picture" name="picture" type="text"
                     placeholder="Drop the link here..." />
             </div>
             {{-- Title --}}
-            <h3>Title</h3>
+            <h3>Name</h3>
             <input style="width: 100%;
             height: 100px;
             border-radius: 20px;
@@ -82,19 +82,13 @@
             resize: none;
             border: #d9d9d9;
             outline-color: #d9d9d9;
-            margin-bottom: 50px;" required class="title-text" id="title" name="title" placeholder="{{$article->title}}" />
-            {{-- Desk --}}
-            <h3>Description</h3>
-            <textarea required class="desc-text" id="descriprion" name="description"
-                placeholder="The Descriptin is...">{{$article->description}}</textarea>
-            {{-- Content --}}
-            <h3>Content</h3>
-            <textarea required class="content-text" id="content" name="content" placeholder="The Content is...">{{$article->content}}</textarea>
+            margin-bottom: 50px;" class="name-text" id="name" name="name" placeholder="Drop Your Name Here..." />
+
             {{-- Submit button --}}
             <div class="publish-button">
-                <a href="">
-                    <button type="submit">Publish</button>
-                </a>
+
+                <button type="submit">Save</button>
+
             </div>
         </form>
     </div>

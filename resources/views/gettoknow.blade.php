@@ -30,7 +30,9 @@
         <a class="logo fw-bold" href="{{url('/')}}">Know<span style="color: #ef8c33">Pedia.</span>
         </a>
         <div>
-         
+            <a href="/">
+                <button type="button" class="outline">Back</button>
+            </a>
         </div>
     </nav>
     <hr />

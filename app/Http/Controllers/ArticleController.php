@@ -20,19 +20,12 @@ class ArticleController extends Controller
         
         $articles = DB::table('articles')
             ->where('user_id', $userId)
-            ->select('id', 'title', 'thumbnail', 'description')
+            ->select('id', 'title', 'thumbnail', 'description','date')
             ->get();
         
-        $second = DB::table('articles')
-            ->select('id', 'title', 'thumbnail', 'description')
-            ->orderBy('id','desc')
-            ->skip(1)
-            ->take(1)
-            ->first();
 
         $viewData = [
             'articles' => $articles,
-            'second' => $second,
             'user' => $user,
         ];
         
@@ -62,18 +55,18 @@ class ArticleController extends Controller
         $description = $request->input('description');
         $content = $request->input('content');
         $user_id = auth()->user()->id;
-        // Thumbnail
-        $thumbnail = $request->file('thumbnail');
-        $thumbnailName = uniqid() . '.' . $thumbnail->getClientOriginalExtension();
-        $thumbnail->move(public_path('thumbnails'), $thumbnailName);
+        $date =
+        $thumbnail = $request->input('thumbnail');
+
 
 
         DB::table('articles')->insert([
-            'thumbnail' => $thumbnailName,
+            'thumbnail' => $thumbnail,
             'title' => $title,
             'description' => $description,
             'content' => $content,
             'user_id' => $user_id,
+            'date' => date('Y-m-d'),
             'created_at' => date('Y-m-d'),
             'updated_at' => date('Y-m-d'),
         ]);
@@ -90,7 +83,7 @@ class ArticleController extends Controller
     public function show(Request $request,$id)
     {
         $article = DB::table('articles')
-                        ->select('id', 'title','content' ,'thumbnail', 'description', 'created_at')
+                        ->select('id', 'title','content' ,'thumbnail', 'description', 'created_at', 'date')
                         ->where('id','=',$id)
                         ->first();
         $view_data = [
@@ -131,6 +124,7 @@ class ArticleController extends Controller
         $title = $request->input('title');
         $description = $request->input('description');
         $content = $request->input('content');
+        $thumbnail = $request->input('thumbnail');
 
         DB::table('articles')
             ->where('id','=',$id)
@@ -138,10 +132,11 @@ class ArticleController extends Controller
                 'title' => $title,
                 'description' => $description,
                 'content' => $content,
+                'thumbnail'=>$thumbnail,
                 'updated_at' => date('Y-m-d H:i:s'),
             ]);
 
-        return redirect("article/{$id}");
+        return redirect("/profile");
     }
 
     /**

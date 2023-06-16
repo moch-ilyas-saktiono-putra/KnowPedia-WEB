@@ -57,6 +57,7 @@
 
     <!-- Search Bar -->
     <div class="search mb-5">
+      <form method="GET" action="/searching"></form>
       <button>
         <i class="fa-solid fa-magnifying-glass"></i>
         <input id="search" type="text" placeholder="Write here" value="" />

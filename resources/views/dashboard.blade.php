@@ -61,7 +61,7 @@
       <div class="main-box-left">
         <img
         style="object-fit: cover"
-          src="{{asset('thumbnails/'.$first->thumbnail)}}"
+          src="{{$first->thumbnail}}"
           alt=""/>
         <div class="left-text">
           <a class="pt-5" href="{{ url("article/$first->id") }}">{{$first->title}}</a>
@@ -73,33 +73,20 @@
     </a>
 
     <!-- Rigth Box -->
-    <div class="right-box-direction">
-      <!-- Top -->
-      <a href="Article.html">
-        <div class="main-box-right mt-0">
-          <img src="{{ asset('thumbnails/'.$second->thumbnail) }}" alt="" />
-          <div class="right-text">
-            <a href="{{ url("article/$second->id") }}">{{$second -> title}}</a>
-            <p>
-              {{$second->description}}
-            </p>
-          </div>
+    <a href="{{ url("article/$second->id") }}">
+      <div class="main-box-left">
+        <img
+        style="object-fit: cover"
+          src="{{$second->thumbnail}}"
+          alt=""/>
+        <div class="left-text">
+          <a class="pt-5" href="{{ url("article/$second->id") }}">{{$second->title}}</a>
+          <p>
+            {{$second->description}}
+          </p>
         </div>
-      </a>
-
-      <!-- Bottom -->
-      <a href="Article.html">
-        <div class="main-box-right">
-          <img src="{{ asset('thumbnails/'.$third->thumbnail) }}" alt="" />
-          <div class="right-text">
-            <a href="{{ url("article/$third->id") }}">{{$third->title}}</a>
-            <p>
-              {{$third->description}}
-            </p>
-          </div>
-        </div>
-      </a>
-    </div>
+      </div>
+    </a>
   </div>
 
   <!-- Seacrh Button -->
@@ -141,7 +128,7 @@
     @if ($count < 4)
     <a href="{{ url("article/$article->id") }}">
       <div class="daily-content mb-4">
-        <img style="object-fit: cover" src="{{asset('thumbnails/'.$article->thumbnail)}}" alt="" />
+        <img style="object-fit: cover" src="{{$article->thumbnail}}" alt="" />
         <div class="layer">
           <a href="">
             {{$article->title}}</a>

@@ -27,14 +27,14 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <a class="logo fw-bold" href="Dashboard.html">Know<span style="color: #ef8c33">Pedia.</span>
+        <a class="logo fw-bold" href="/">Know<span style="color: #ef8c33">Pedia.</span>
         </a>
         <div>
-            <a href="Write.html">
-                <button type="button" class="outline">Write</button>
+            <a href="/profile">
+                <button type="button" class="outline">Profile</button>
             </a>
-            <a href="profile.html">
-                <button type="button" class="cta">Log In</button>
+            <a href="/logout">
+                <button type="button" class="cta">Logout</button>
             </a>
         </div>
     </nav>
@@ -46,17 +46,17 @@
             {{$article->title}}
         </h1>
         <p class="mt-1 mb-0">{{$article->description}}</p>
-        <p class="mb-0">{{ $article->created_at}}</p>
+        <p class="mt-1">{{ $article->date}}</p>
     </div>
 
     <!-- Carousel -->
     <div class="justify-content-center text-center m-5" >
-        <img style="width: 800px; height:450px; object-fit:cover;" src="{{asset('thumbnails/'.$article->thumbnail)}}" alt="">
+        <img style="width: 800px; height:450px; object-fit:cover;" src="{{$article->thumbnail}}" alt="">
     </div>
 
     <!-- Article -->
     <div class="article-content">
-        <p>{{$article->content}}</p>
+        <p style="white-space: pre-line">{{$article->content}}</p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('picture');
+            $table->string('picture')->default('https://www.pngall.com/wp-content/uploads/5/Profile-PNG-File.png');
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
