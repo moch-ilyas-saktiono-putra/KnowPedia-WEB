@@ -50,14 +50,25 @@
     </div>
 
     <!-- Carousel -->
-    <div class="justify-content-center text-center m-5" >
-        <img style="width: 800px; height:450px; object-fit:cover;" src="{{$article->thumbnail}}" alt="">
+    <div class="justify-content-center text-center m-5">
+        <img style="width: 800px; height:450px; object-fit:cover;border-radius:20px;" src="{{$article->thumbnail}}"
+            alt="">
     </div>
 
     <!-- Article -->
     <div class="article-content">
         <p style="white-space: pre-line">{{$article->content}}</p>
     </div>
+
+    @if ($user->role == 'admin')
+    <form action="/admin/{{ $article->id }}" method='POST'>
+        @method('DELETE')
+        @csrf
+        <button type="submit" class="btn btn-danger" style="margin-left: 10%">Delete</button>
+    </form>
+    @else
+
+    @endif
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">

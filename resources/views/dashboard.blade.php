@@ -27,7 +27,7 @@
 <body>
   <!-- Navbar -->
   <nav class="navbar">
-    <a class="logo fw-bold" href="Dashboard.html">Know<span style="color: #ef8c33">Pedia.</span>
+    <a class="logo fw-bold" href="{{url('/')}}">Know<span style="color: #ef8c33">Pedia.</span>
     </a>
     <div>
       @if (Auth::check())

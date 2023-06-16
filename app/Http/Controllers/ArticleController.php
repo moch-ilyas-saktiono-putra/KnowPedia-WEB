@@ -17,6 +17,11 @@ class ArticleController extends Controller
     {
         $user = Auth::user();
         $userId = $user->id;
+
+        $userProperti = DB::table('users')
+            ->where('id',$userId)
+            ->select('name', 'picture', 'role')
+            ->get();
         
         $articles = DB::table('articles')
             ->where('user_id', $userId)
@@ -27,6 +32,7 @@ class ArticleController extends Controller
         $viewData = [
             'articles' => $articles,
             'user' => $user,
+            'userProperti' => $userProperti
         ];
         
         return view('profile', $viewData);
@@ -82,12 +88,14 @@ class ArticleController extends Controller
      */
     public function show(Request $request,$id)
     {
+        $user = Auth::user();
         $article = DB::table('articles')
                         ->select('id', 'title','content' ,'thumbnail', 'description', 'created_at', 'date')
                         ->where('id','=',$id)
                         ->first();
         $view_data = [
-            'article' => $article
+            'article' => $article,
+            'user'=> $user
         ];
 
         return view('article', $view_data);
@@ -152,5 +160,13 @@ class ArticleController extends Controller
             ->delete();
 
         return redirect("profile");
+    }
+    public function adminDestroy($id)
+    {
+        DB::table('articles')
+            ->where('id',$id)
+            ->delete();
+
+        return redirect("/");
     }
 }

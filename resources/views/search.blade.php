@@ -77,9 +77,7 @@
 <footer class="footer mt-5 fixed-bottom">
   <p class="m-0 fw-bold fs-3">KnowPedia.</p>
   <p style="text-align: center">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste perspiciatis
-    necessitatibus itaque soluta eos, non amet. Possimus illum eum eaque cum,
-    provident ratione molestias ad.
+    "Awaken your curiosity with the most relevant and up-to-date information"
   </p>
   <div class="media-sosial" style="font-size: 20px">
     <a href=""><i class="fa-brands fa-square-facebook"></i></a>

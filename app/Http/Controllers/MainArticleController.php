@@ -36,6 +36,6 @@ class MainArticleController extends Controller
             'second' => $second,
                     ];
 
-return view ('dashboard',$viewdata);
+        return view ('dashboard',$viewdata);
     }
 }

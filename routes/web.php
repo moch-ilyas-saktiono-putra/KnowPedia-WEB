@@ -54,6 +54,7 @@ Route::patch('/edit/profile/{id}', [UserController::class, 'update']);
 Route::patch('edit/{id}', [ArticleController::class, 'update']);
 
 Route::delete('/delete/{id}', [ArticleController::class, 'destroy']);
+Route::delete('/admin/{id}', [ArticleController::class, 'Admindestroy']);
 
 // login Register
 Route::get('/login', [AuthController::class, 'login']);

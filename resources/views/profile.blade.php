@@ -30,9 +30,19 @@
     <a class="logo fw-bold" href="/">Know<span style="color: #ef8c33">Pedia.</span>
     </a>
     <div>
+      @if ($user->role == 'admin')
+      <a href="/logout">
+        <button type="button" class="outline">logout</button>
+      </a>
+      @else
       <a href="/write">
         <button type="button" class="outline">Write</button>
       </a>
+      <a href="/logout">
+        <button type="button" class="outline">logout</button>
+      </a>
+      @endif
+
     </div>
   </nav>
 
@@ -51,16 +61,26 @@
     <!-- Profile Name -->
     <div class="profile-name d-flex flex-row align-items-center position-absolute"
       style="margin-top: 55px; margin-top: 100px">
+      @if ($user->picture)
       <img style="
             border-radius: 100%;
             height: 150px;
             width: 150px;
             object-fit: cover;
           " src="{{$user->picture}}" alt="" />
+      @else
+      <img style="
+              border-radius: 100%;
+              height: 150px;
+              width: 150px;
+              object-fit: cover;
+            " src="https://t4.ftcdn.net/jpg/02/15/84/43/360_F_215844325_ttX9YiIIyeaR7Ne6EaLLjMAmy4GvPC69.jpg" alt="" />
+      @endif
       <div class="d-flex justify-content-center flex-column">
         <h1 class="fw-bold ms-4" style="color: white">
           {{$user->name}}
         </h1>
+
         <a href="{{url("/edit/profile/{$user->id}")}}">
           <button class="btn btn-light ms-4" style="width:80px" href="">Edit</button>
         </a>
@@ -78,6 +98,9 @@
   <hr />
 
   <!-- Article Published -->
+  @if ($user->role == 'admin')
+
+  @else
   <div class="article-published justify-content-center align-items-center text-center mb-5">
     <h2 class="fw-bold m-3 mb-5" style="color: #ef8c33">Article Published</h2>
 
@@ -140,6 +163,8 @@
       </div>
     </div>
   </div>
+  @endif
+
   <!-- Bootsrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
